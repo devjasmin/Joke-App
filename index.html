@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Witze-App</title>
+  </head>
+  <body>
+       <div class="witze-wrapper">
+      <div class="witze-header">
+        <div class="witze-title">Witze App</div>
+      </div>
+    <div class="witze-main">
+      <witze-p>Klicke auf den Button um einen Witz zu laden!</witze-p>
+      <button onclick="loadjoke()" class="newjoke">Neuen Witz laden</button>
+      <p id="joke" class="joke-text"></p>
+      <button onclick="savejoke()" class="savejoke">Witz speichern</button>
+    </div>
+    <div class="witze-footer">
+      <p class="subtitle">Alle gespeicherten Witze:</p>
+      <div class="savedjokelist">
+        <div id="witzliste"></div>
+      </div>
+      <button onclick="deletejoke()" class="deleteJoke">Witze löschen</button>
+    </div>
+ <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
