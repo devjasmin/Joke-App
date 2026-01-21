@@ -1,22 +1,31 @@
 import "./style.css";
 
+const newJokeBtn = document.querySelector(".newjoke");
+const saveJokeBtn = document.querySelector(".savejoke");
+const deleteJokeBtn = document.querySelector(".deleteJoke");
+const deleteAllJokeBtn = document.querySelector(".deleteAllJoke");
+
 let currentJoke = null;
 
-function loadjoke() {
-  const jokeElement = document.getElementById("joke");
+newJokeBtn.addEventListener("click", loadjoke);
+saveJokeBtn.addEventListener("click", savejoke);
+deleteJokeBtn.addEventListener("click", deletejoke);
+deleteAllJokeBtn.addEventListener("click", deleteAllJokeBtn);
 
+const jokeElement = document.getElementById("joke");
+function loadjoke() {
   fetch("https://icanhazdadjoke.com/", {
     headers: {
       Accept: "application/json",
-      "User-Agent": "Witze-App (https://devjasmin.github.io/witze-app)",
+      "User-Agent": "Joke-App (https://devjasmin.github.io/joke-app)",
     },
   })
     .then((response) => response.json())
     .then((jokeData) => {
       currentJoke = { id: jokeData.id, text: jokeData.joke };
       document.getElementById("joke").textContent = currentJoke.text;
-      // console.log("Joke ID:", joke.id); // 👈 HIER IST DIE ID
-      // console.log("Joke Text:", joke.text); // HIER IST DEIN TEXT
+      console.log("Joke ID:", joke.id); // 👈 HIER IST DIE ID
+      console.log("Joke Text:", joke.text); // HIER IST DEIN TEXT
     })
     .catch((error) => {
       jokeElement.textContent = "Witz konnte nicht geladen werden.";
@@ -39,7 +48,6 @@ function savejoke() {
   savedJokes.push(currentJoke);
   localStorage.setItem("jokes", JSON.stringify(savedJokes));
 }
-
 // Witz aus LocalStorage laden
 function loadSaveJokes() {
   const savedJokes = JSON.parse(localStorage.getItem("jokes") || "[]");
@@ -66,10 +74,11 @@ function renderJokes() {
     const p = document.createElement("p");
     p.classList.add("saved-joke");
     p.textContent = joke.text;
+    console.log(joke.id);
 
     const btn = document.createElement("button");
     btn.textContent = "❌";
-    btn.onclick = () => deletejoke(joke.id);
+    btn.addEventListener("click", () => deletejoke(joke.id));
 
     p.appendChild(btn);
     witze.appendChild(p);
@@ -83,8 +92,7 @@ function deletejoke(id) {
   renderJokes();
 }
 
-function clearJokes() {
-  localStorage.removeItem("jokes");
-  document.getElementById("witzliste").innerHTML = "";
-}
-clearJokes();
+document.addEventListener("DOMContentLoaded", () => {
+  loadjoke();
+  renderJokes();
+});
