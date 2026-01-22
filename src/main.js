@@ -24,8 +24,8 @@ function loadjoke() {
     .then((jokeData) => {
       currentJoke = { id: jokeData.id, text: jokeData.joke };
       document.getElementById("joke").textContent = currentJoke.text;
-      console.log("Joke ID:", joke.id); // 👈 HIER IST DIE ID
-      console.log("Joke Text:", joke.text); // HIER IST DEIN TEXT
+      //console.log("Joke ID:", joke.id); // 👈 HIER IST DIE ID
+      //console.log("Joke Text:", joke.text); // HIER IST DEIN TEXT
     })
     .catch((error) => {
       jokeElement.textContent = "Witz konnte nicht geladen werden.";
@@ -74,7 +74,6 @@ function renderJokes() {
     const p = document.createElement("p");
     p.classList.add("saved-joke");
     p.textContent = joke.text;
-    console.log(joke.id);
 
     const btn = document.createElement("button");
     btn.textContent = "❌";
@@ -91,8 +90,3 @@ function deletejoke(id) {
   localStorage.setItem("jokes", JSON.stringify(updatedJokes));
   renderJokes();
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  loadjoke();
-  renderJokes();
-});

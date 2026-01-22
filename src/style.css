@@ -1,6 +1,6 @@
 @font-face {
   font-family: RubikScribble-Regular;
-  src: url(./assets/fonts/RubikScribble-Regular.ttf);
+  src: url(./Joke-App/src/fonts/RubikScribble-Regular.ttf);
 }
 :root {
   --primary-color: #0f496f;
@@ -13,7 +13,7 @@ body {
 }
 
 .witze-wrapper {
-  max-width: 100%;
+  max-width: 600px;
   max-height: 800px;
   margin: auto;
   border: 8px solid var(--secondary-color);
@@ -60,9 +60,6 @@ button.newjoke {
   color: black;
   padding: 20px;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
 
 button.savejoke {
@@ -112,4 +109,13 @@ button.deleteJoke {
   color: black;
   border-radius: 10px;
   cursor: pointer;
-} /*# sourceMappingURL=style.css.map */
+}
+
+button.deleteAllJoke {
+  margin: 20px;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

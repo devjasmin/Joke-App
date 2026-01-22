@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,23 +6,24 @@
     <title>Witze-App</title>
   </head>
   <body>
-       <div class="witze-wrapper">
+    <div class="witze-wrapper">
       <div class="witze-header">
         <div class="witze-title">Witze App</div>
       </div>
-    <div class="witze-main">
-      <witze-p>Klicke auf den Button um einen Witz zu laden!</witze-p>
-      <button onclick="loadjoke()" class="newjoke">Neuen Witz laden</button>
-      <p id="joke" class="joke-text"></p>
-      <button onclick="savejoke()" class="savejoke">Witz speichern</button>
-    </div>
-    <div class="witze-footer">
-      <p class="subtitle">Alle gespeicherten Witze:</p>
-      <div class="savedjokelist">
-        <div id="witzliste"></div>
+      <div class="witze-main">
+        <witze-p>Klicke auf den Button um einen Witz zu laden!</witze-p>
+        <button class="newjoke">Neuen Witz laden</button>
+        <p id="joke" class="joke-text"></p>
+        <button class="savejoke">Witz speichern</button>
       </div>
-      <button onclick="deletejoke()" class="deleteJoke">Witze löschen</button>
+      <div class="witze-footer">
+        <p class="subtitle">Alle gespeicherten Witze:</p>
+        <div class="savedjokelist">
+          <div id="witzliste"></div>
+        </div>
+        <button class="deleteJoke">Witz löschen</button>
+      </div>
     </div>
- <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
