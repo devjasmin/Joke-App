@@ -1,25 +1,17 @@
 @font-face {
+  font-family: ShadowsIntoLight;
+  src: url(./assets/fonts/ShadowsIntoLight-Regular.ttf);
+}
+@font-face {
   font-family: RubikScribble-Regular;
   src: url(./assets/fonts/RubikScribble-Regular.ttf);
 }
+
 :root {
   --primary-color: #0f496f;
   --secondary-color: rgb(149, 238, 14);
 }
 
-.witze-title {
-  font-size: 30px;
-  padding: 10px;
-}
-
-.joke-text {
-  font-size: 14px;
-  padding: 10px;
-}
-
-button.newjoke,
-button.savejoke,
-button.deleteJoke,
 body {
   margin: 0;
   padding: 0;
@@ -44,7 +36,6 @@ body {
   color: var(--secondary-color);
   padding: 20px;
 }
-
 .witze-main {
   text-align: center;
   padding: 20px;
@@ -53,6 +44,7 @@ body {
 
 witze-p {
   font-size: 17px;
+  font-family: ShadowsIntoLight;
   color: white;
   margin: 0px;
   padding: 10px;
@@ -69,13 +61,11 @@ button.newjoke {
 
 .joke-text {
   font-size: 16px;
+  font-family: ShadowsIntoLight;
   background-color: var(--secondary-color);
   color: black;
   padding: 20px;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
 
 button.savejoke {
@@ -86,7 +76,6 @@ button.savejoke {
   border-radius: 10px;
   cursor: pointer;
 }
-
 .witze-footer {
   text-align: center;
   padding: 10px;
@@ -127,27 +116,24 @@ button.deleteJoke {
   cursor: pointer;
 }
 
-button.deleteAllJoke {
-  margin: 20px;
-  padding: 15px;
-  background-color: var(--secondary-color);
-  color: black;
-  border-radius: 10px;
-  cursor: pointer;
-} /*# sourceMappingURL=style.css.map */
+// button.deleteAllJoke {
+//  margin: 20px;
+//  padding: 15px;
+//  background-color: var(--secondary-color);
+//  color: black;
+//  border-radius: 10px;
+//  cursor: pointer;
+//}
 
-@media (min-width: 600px) {
-  .witze-wrapper {
-    max-width: 100%;
-    max-height: 100%;
-    border: 4px solid var(--secondary-color);
-  }
-}
-
-@media (min-width: 1200px) {
-  .witze-wrapper {
-    max-width: 100%;
-    max-height: 100%;
-    border: 4px solid var(--secondary-color);
-  }
-}
+//.darkmode {
+//background-color: var(--primary-color);
+//height: 50px;
+//display: flex;
+//justify-content: flex-end;
+//align-items: center;
+//padding: 10px;
+//}
+//#darkmode-toggle {
+//background-color: var(--primary-color);
+//cursor: pointer;
+//}

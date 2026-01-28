@@ -3,14 +3,14 @@ import "./style.css";
 const newJokeBtn = document.querySelector(".newjoke");
 const saveJokeBtn = document.querySelector(".savejoke");
 const deleteJokeBtn = document.querySelector(".deleteJoke");
-const deleteAllJokeBtn = document.querySelector(".deleteAllJoke");
+//const deleteAllJokeBtn = document.querySelector(".deleteAllJoke");
 
 let currentJoke = null;
 
 newJokeBtn.addEventListener("click", loadjoke);
 saveJokeBtn.addEventListener("click", savejoke);
 deleteJokeBtn.addEventListener("click", deletejoke);
-deleteAllJokeBtn.addEventListener("click", deleteAllJokeBtn);
+//deleteAllJokeBtn.addEventListener("click", deleteAllJokeBtn);
 
 const jokeElement = document.getElementById("joke");
 function loadjoke() {
@@ -38,6 +38,16 @@ function savejoke() {
 
   //DOM: Witz anzeigen
   const witze = document.getElementById("witzliste");
+
+  const alreadySaved = [...witze.children].some(
+    (p) => p.textContent === currentJoke.text,
+  );
+
+  if (alreadySaved) {
+    alert("Dieser Witz wurde bereits gespeichert.");
+    return; // Witz nicht doppelt speichern
+  }
+
   const p = document.createElement("p");
   p.classList.add("saved-joke");
   p.textContent = currentJoke.text;
