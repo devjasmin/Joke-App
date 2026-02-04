@@ -1,4 +1,8 @@
 @font-face {
+  font-family: ShadowsIntoLight;
+  src: url(./assets/fonts/ShadowsIntoLight-Regular.ttf);
+}
+@font-face {
   font-family: RubikScribble-Regular;
   src: url(./assets/fonts/RubikScribble-Regular.ttf);
 }
@@ -7,22 +11,14 @@
   --secondary-color: rgb(149, 238, 14);
 }
 
-.witze-title {
-  font-size: 30px;
-  padding: 10px;
-}
-
-.joke-text {
-  font-size: 14px;
-  padding: 10px;
-}
-
-button.newjoke,
-button.savejoke,
-button.deleteJoke,
 body {
   margin: 0;
   padding: 0;
+}
+
+body.darkmode {
+  --primary-color: #121212;
+  --secondary-color: #bb86fc;
 }
 
 .witze-wrapper {
@@ -73,9 +69,6 @@ button.newjoke {
   color: black;
   padding: 20px;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
 
 button.savejoke {
@@ -127,27 +120,28 @@ button.deleteJoke {
   cursor: pointer;
 }
 
-button.deleteAllJoke {
-  margin: 20px;
-  padding: 15px;
-  background-color: var(--secondary-color);
+.btn-darkmode {
+  margin: 5px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  padding: 12px;
+  width: 40px;
+  height: 40px;
   color: black;
-  border-radius: 10px;
-  cursor: pointer;
-} /*# sourceMappingURL=style.css.map */
-
-@media (min-width: 600px) {
-  .witze-wrapper {
-    max-width: 100%;
-    max-height: 100%;
-    border: 4px solid var(--secondary-color);
-  }
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  background-image: url(./assets/moon_111148.svg);
+  background-repeat: no-repeat;
 }
 
-@media (min-width: 1200px) {
-  .witze-wrapper {
-    max-width: 100%;
-    max-height: 100%;
-    border: 4px solid var(--secondary-color);
-  }
+.save-joke-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
+
+.delete-joke-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}/*# sourceMappingURL=style.css.map */

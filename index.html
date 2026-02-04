@@ -9,21 +9,27 @@
     <div class="witze-wrapper">
       <div class="witze-header">
         <div class="witze-title">
-          Witze App <button class="btn-darkmode" id="dm-toggle"></button></App>
+          Witze App <br><button class="btn-darkmode" id="dm-toggle"></button></
         </div>
       </div>
       <div class="witze-main">
         <witze-p>Klicke auf den Button um einen Witz zu laden!</witze-p>
         <button class="newjoke">Neuen Witz laden</button>
         <p id="joke" class="joke-text"></p>
-        <button class="savejoke">Witz speichern</button>
+        <button class="savejoke">Witz speichern <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="save-joke-icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+</svg>
+</button>
       </div>
       <div class="witze-footer">
         <p class="subtitle">Alle gespeicherten Witze:</p>
         <div class="savedjokelist">
           <div id="witzliste"></div>
         </div>
-        <button class="deleteJoke">Witz löschen</button>
+        <button class="deleteJoke">Witz löschen <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="delete-joke-icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m3 3 1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 0 1 1.743-1.342 48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664 19.5 19.5" />
+</svg>
+</button>
       </div>
     </div>
     <script type="module" src="./src/main.js"></script>

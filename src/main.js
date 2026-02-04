@@ -19,7 +19,7 @@ deleteJokeBtn.addEventListener("click", deletejoke);
 
 const jokeElement = document.getElementById("joke");
 function loadjoke() {
-  fetch("https://icanhazdadjoke.com/", {
+  fetch("https://v2.jokeapi.dev/joke/Any?lang=de", {
     headers: {
       Accept: "application/json",
       "User-Agent": "Joke-App (https://devjasmin.github.io/joke-app)",
@@ -29,8 +29,8 @@ function loadjoke() {
     .then((jokeData) => {
       currentJoke = { id: jokeData.id, text: jokeData.joke };
       document.getElementById("joke").textContent = currentJoke.text;
-      //console.log("Joke ID:", joke.id); // 👈 HIER IST DIE ID
-      //console.log("Joke Text:", joke.text); // HIER IST DEIN TEXT
+      console.log("Joke ID:", currentJoke.id); // 👈 HIER IST DIE ID
+      console.log("Joke Text:", currentJoke.text); // HIER IST DEIN TEXT
     })
     .catch((error) => {
       jokeElement.textContent = "Witz konnte nicht geladen werden.";
