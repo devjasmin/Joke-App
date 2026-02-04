@@ -4,6 +4,11 @@ const newJokeBtn = document.querySelector(".newjoke");
 const saveJokeBtn = document.querySelector(".savejoke");
 const deleteJokeBtn = document.querySelector(".deleteJoke");
 //const deleteAllJokeBtn = document.querySelector(".deleteAllJoke");
+const darkModeToggle = document.getElementById("dm-toggle");
+
+darkModeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("darkmode");
+});
 
 let currentJoke = null;
 
