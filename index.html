@@ -4,34 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Witze-App</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="witze-wrapper">
-      <div class="witze-header">
-        <div class="witze-title">
-          Witze App <br><button class="btn-darkmode" id="dm-toggle"></button></
+    <div class="jokes-app">
+      <div class="jokes-app__header">
+        <div class="jokes-app__title">
+          Witze App <br /><button
+            class="jokes-app__btn-darkmode"
+            id="dm-toggle"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="jokes-app__dm-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+              />
+            </svg>
+          </button>
         </div>
       </div>
-      <div class="witze-main">
-        <witze-p>Klicke auf den Button um einen Witz zu laden!</witze-p>
-        <button class="newjoke">Neuen Witz laden</button>
-        <p id="joke" class="joke-text"></p>
-        <button class="savejoke">Witz speichern <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="save-joke-icon">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
-</svg>
-</button>
+      <div class="jokes-app__main">
+        <p>Klicke auf den Button um einen Witz zu laden!</p>
+        <button class="jokes-app__newjoke">Neuen Witz laden</button>
+        <p id="joke" class="jokes-app__joke-text"></p>
+        <button class="jokes-app__savejoke">
+          Witz speichern
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="jokes-app__savejoke-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+            />
+          </svg>
+        </button>
       </div>
-      <div class="witze-footer">
-        <p class="subtitle">Alle gespeicherten Witze:</p>
-        <div class="savedjokelist">
+      <div class="jokes-app__footer">
+        <p class="jokes-app__subtitle">Alle gespeicherten Witze:</p>
+        <div class="jokes-app__savedjokelist">
           <div id="witzliste"></div>
         </div>
-        <button class="deleteJoke">Witz löschen <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="delete-joke-icon">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m3 3 1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 0 1 1.743-1.342 48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664 19.5 19.5" />
-</svg>
-</button>
+        <button class="jokes-app__deletejoke">
+          Witz löschen
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="jokes-app__deletejoke-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m3 3 1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 0 1 1.743-1.342 48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664 19.5 19.5"
+            />
+          </svg>
+        </button>
       </div>
     </div>
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
