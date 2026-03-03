@@ -1,0 +1,168 @@
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+  font-family: RubikScribble-Regular;
+  src: url(./assets/fonts/RubikScribble-Regular.ttf);
+}
+
+:root {
+  --primary-color: #0f496f;
+  --secondary-color: rgb(149, 238, 14);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+}
+
+body.darkmode {
+  --primary-color: #121212;
+  --secondary-color: #bb86fc;
+}
+
+.jokes-app {
+  max-width: 1200px;
+  max-height: 1200px;
+  margin: auto;
+  border: 8px solid var(--secondary-color);
+}
+
+.jokes-app__header {
+  text-align: center;
+  margin: 0px;
+}
+
+.jokes-app__title {
+  font-size: 50px;
+  font-family: RubikScribble-Regular;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 20px;
+}
+.jokes-app__main {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+}
+
+p {
+  font-size: 17px;
+  color: white;
+  margin: 0px;
+  padding: 10px;
+}
+
+button.jokes-app__newjoke {
+  margin: 20px;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.jokes-app__joke-text {
+  font-size: 16px;
+
+  background-color: var(--secondary-color);
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.jokes-app__savejoke {
+  margin: 20px;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.jokes-app__footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+}
+
+.jokes-app__subtitle {
+  font-size: 20px;
+  color: var(--secondary-color);
+  margin: 0px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.jokes-app__savedjokelist {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.jokes-app__saved-joke {
+  margin-top: 5px;
+  padding: 10px 10px 20px 10px;
+  font-size: 15px;
+  color: black;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+
+.jokes-app__deletejoke {
+  margin: 20px;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// button.deleteAllJoke {
+//  margin: 20px;
+//  padding: 15px;
+//  background-color: var(--secondary-color);
+//  color: black;
+//  border-radius: 10px;
+//  cursor: pointer;
+//}
+
+.jokes-app__btn-darkmode {
+  margin: 5px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  padding: 12px;
+  color: black;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  background-image: url(./assets/svg/moon_111148.svg);
+  background-repeat: no-repeat;
+}
+
+.jokes-app__dm-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.saved-joke {
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--secondary-color);
+  color: black;
+}
