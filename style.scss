@@ -67,7 +67,6 @@ button.jokes-app__newjoke {
 
 .jokes-app__joke-text {
   font-size: 16px;
-
   background-color: var(--secondary-color);
   color: black;
   padding: 20px;
@@ -132,15 +131,6 @@ button.jokes-app__newjoke {
   }
 }
 
-// button.deleteAllJoke {
-//  margin: 20px;
-//  padding: 15px;
-//  background-color: var(--secondary-color);
-//  color: black;
-//  border-radius: 10px;
-//  cursor: pointer;
-//}
-
 .jokes-app__btn-darkmode {
   margin: 5px;
   padding-bottom: 20px;
@@ -165,4 +155,13 @@ button.jokes-app__newjoke {
   margin: 10px;
   background-color: var(--secondary-color);
   color: black;
+}
+
+button.jokes-app__clearAllJokes {
+  margin: 20px;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
 }

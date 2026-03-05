@@ -3,7 +3,7 @@ import "./style.css";
 const newJokeBtn = document.querySelector(".jokes-app__newjoke");
 const saveJokeBtn = document.querySelector(".jokes-app__savejoke");
 const deleteJokeBtn = document.querySelector(".jokes-app__deletejoke");
-//const deleteAllJokeBtn = document.querySelector(".deleteAllJoke");
+const deleteAllJokeBtn = document.querySelector(".jokes-app__clearAllJokes");
 const darkModeToggle = document.getElementById("dm-toggle");
 
 darkModeToggle.addEventListener("click", () => {
@@ -15,7 +15,7 @@ let currentJoke = null;
 newJokeBtn.addEventListener("click", loadjoke);
 saveJokeBtn.addEventListener("click", savejoke);
 deleteJokeBtn.addEventListener("click", deletejoke);
-//deleteAllJokeBtn.addEventListener("click", deleteAllJokeBtn);
+deleteAllJokeBtn.addEventListener("click", clearAllJokes);
 
 const jokeElement = document.getElementById("joke");
 
@@ -119,4 +119,9 @@ function deletejoke(id) {
   const updatedJokes = Jokedelete.filter((joke) => joke.id !== id);
   localStorage.setItem("jokes", JSON.stringify(updatedJokes));
   renderJokes();
+}
+
+function clearAllJokes() {
+  localStorage.removeItem("jokes");
+  document.getElementById("witzliste").innerHTML = " ";
 }
