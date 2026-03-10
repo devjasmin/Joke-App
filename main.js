@@ -1,4 +1,4 @@
-import "./style.css";
+import "./style.scss";
 
 const newJokeBtn = document.querySelector(".jokes-app__newjoke");
 const saveJokeBtn = document.querySelector(".jokes-app__savejoke");
