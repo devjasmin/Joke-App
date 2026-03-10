@@ -11,12 +11,15 @@
 :root {
   --primary-color: #0f496f;
   --secondary-color: rgb(149, 238, 14);
+
+  --font-main: Inter, sans-serif;
+  --font-accent: RubikScribble-Regular, cursive;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Inter, sans-serif;
+  font-family: var(--font-main);
 }
 
 body.darkmode {
@@ -38,7 +41,7 @@ body.darkmode {
 
 .jokes-app__title {
   font-size: 50px;
-  font-family: RubikScribble-Regular, cursive;
+  font-family: var(--font-accent);
   background-color: var(--primary-color);
   color: var(--secondary-color);
   padding: 20px;
