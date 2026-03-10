@@ -1,10 +1,10 @@
 @font-face {
   font-family: Inter;
-  src: url(./assets/fonts/Inter-VariableFont_opsz\,wght.ttf);
+  src: url(./public/fonts/Inter-VariableFont_opsz\,wght.ttf);
 }
 @font-face {
   font-family: RubikScribble-Regular;
-  src: url(./assets/fonts/RubikScribble-Regular.ttf);
+  src: url(./public/fonts/RubikScribble-Regular.ttf);
 }
 :root {
   --primary-color: #0f496f;
@@ -144,4 +144,4 @@ button.jokes-app__newjoke {
 .jokes-app__dm-icon {
   width: 30px;
   height: 30px;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
