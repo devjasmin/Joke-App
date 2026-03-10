@@ -10,6 +10,9 @@ darkModeToggle.addEventListener("click", () => {
   document.body.classList.toggle("darkmode");
 });
 
+if (!currentJoke) {
+  saveJokeBtn.classList.remove("jokes-app__savejoke");
+}
 let currentJoke = null;
 
 newJokeBtn.addEventListener("click", loadjoke);
