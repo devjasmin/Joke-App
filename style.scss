@@ -10,28 +10,28 @@
 
 :root {
   --primary-color: #0f496f;
-  --secondary-color: rgb(149, 238, 14);
+  --secondary-color: rgb(238, 132, 66);
 
   --font-main: Inter, sans-serif;
   --font-accent: RubikScribble-Regular, cursive;
 }
 
 body {
-  margin: 0;
+  margin: 0px;
   padding: 0;
   font-family: var(--font-main);
 }
 
 body.darkmode {
   --primary-color: #121212;
-  --secondary-color: #bb86fc;
+  --secondary-color: #ad76f1;
 }
 
 .jokes-app {
-  max-width: 800px;
-  max-height: 800px;
-  margin: auto;
-  border: 8px solid var(--secondary-color);
+  max-width: 100%;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 15px;
 }
 
 .jokes-app__header {
@@ -41,27 +41,33 @@ body.darkmode {
 
 .jokes-app__title {
   font-size: 50px;
+  font-weight: bold;
   font-family: var(--font-accent);
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding: 20px;
+  padding: 30px;
 }
 .jokes-app__main {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
+  margin: 0 auto;
   background-color: var(--primary-color);
 }
 
 p {
-  font-size: 17px;
-  color: white;
+  font-size: 1rem;
+  color: var(--secondary-color);
   margin: 0px;
   padding: 10px;
+  text-align: center;
 }
 
 button.jokes-app__newjoke {
   margin: 20px;
   padding: 15px;
+  font-size: 1rem;
   background-color: var(--secondary-color);
   color: black;
   border-radius: 10px;
@@ -74,15 +80,22 @@ button.jokes-app__newjoke {
   color: black;
   padding: 20px;
   border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
 }
 
 .jokes-app__savejoke {
   margin: 20px;
   padding: 15px;
+  font-size: 1rem;
   background-color: var(--secondary-color);
   color: black;
   border-radius: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 9px;
 
   &-icon {
     width: 20px;
@@ -91,7 +104,9 @@ button.jokes-app__newjoke {
 }
 
 .jokes-app__footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 10px;
   background-color: var(--primary-color);
 }
@@ -123,10 +138,14 @@ button.jokes-app__newjoke {
 .jokes-app__deletejoke {
   margin: 20px;
   padding: 15px;
+  font-size: 1rem;
   background-color: var(--secondary-color);
   color: black;
   border-radius: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 9px;
 
   &-icon {
     width: 20px;
@@ -135,8 +154,8 @@ button.jokes-app__newjoke {
 }
 
 .jokes-app__btn-darkmode {
-  margin: 5px;
-  padding-bottom: 20px;
+  margin: 20px;
+  padding-bottom: 10px;
   font-size: 20px;
   padding: 12px;
   color: black;
@@ -156,15 +175,72 @@ button.jokes-app__newjoke {
   border-radius: 8px;
   padding: 10px;
   margin: 10px;
+  font-size: 15px;
   background-color: var(--secondary-color);
   color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 button.jokes-app__clearAllJokes {
   margin: 20px;
   padding: 15px;
+  font-size: 1rem;
   background-color: var(--secondary-color);
   color: black;
   border-radius: 10px;
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .jokes-app {
+    max-width: 80%;
+  }
+
+  .jokes-app__title {
+    padding: 20px;
+    font-size: 60px;
+  }
+  .jokes-app__main p {
+    font-size: 1.5rem;
+  }
+  .jokes-app__subtitle {
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: 900px) {
+    .jokes-app {
+      max-width: 60%;
+    }
+
+    .jokes-app__title {
+      padding: 30px;
+      font-size: 80px;
+    }
+    .jokes-app__main p {
+      font-size: 1.8rem;
+    }
+    .jokes-app__subtitle {
+      font-size: 1.9rem;
+    }
+
+    @media (min-width: 1200) {
+      .jokes-app {
+        max-width: 50%;
+      }
+
+      .jokes-app__title {
+        padding: 40px;
+        font-size: 90px;
+      }
+      .jokes-app__main p {
+        font-size: 1.8rem;
+      }
+      .jokes-app__subtitle {
+        font-size: 1.9rem;
+      }
+    }
+  }
 }

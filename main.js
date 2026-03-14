@@ -44,8 +44,8 @@ function loadjoke() {
 
       currentJoke = { id: jokeData.id, text: jokeText };
       document.getElementById("joke").textContent = currentJoke.text;
-      console.log("Joke ID:", currentJoke.id); // 👈 HIER IST DIE ID
-      console.log("Joke Text:", currentJoke.text); // HIER IST DEIN TEXT
+      // console.log("Joke ID:", currentJoke.id);
+      // console.log("Joke Text:", currentJoke.text);
     })
     .catch((error) => {
       jokeElement.textContent = "Witz konnte nicht geladen werden.";
@@ -54,9 +54,8 @@ function loadjoke() {
 }
 
 function savejoke() {
-  if (!currentJoke) return; //Sicherstellen, dass ein Witz geladen ist
+  if (!currentJoke) return;
 
-  //DOM: Witz anzeigen
   const witze = document.getElementById("witzliste");
 
   const alreadySaved = [...witze.children].some(
@@ -65,7 +64,7 @@ function savejoke() {
 
   if (alreadySaved) {
     alert("Dieser Witz wurde bereits gespeichert.");
-    return; // Witz nicht doppelt speichern
+    return;
   }
 
   const p = document.createElement("p");
@@ -73,12 +72,11 @@ function savejoke() {
   p.textContent = currentJoke.text;
   witze.appendChild(p);
 
-  // LocalStorage - Witz speichern
   const savedJokes = JSON.parse(localStorage.getItem("jokes") || "[]");
   savedJokes.push(currentJoke);
   localStorage.setItem("jokes", JSON.stringify(savedJokes));
 }
-// Witz aus LocalStorage laden
+
 function loadSaveJokes() {
   const savedJokes = JSON.parse(localStorage.getItem("jokes") || "[]");
   const witze = document.getElementById("witzliste");
@@ -91,14 +89,13 @@ function loadSaveJokes() {
   });
 }
 
-// Lädt Witze beim Start
 document.addEventListener("DOMContentLoaded", loadSaveJokes);
 
 function renderJokes() {
   const savedJokes = JSON.parse(localStorage.getItem("jokes") || "[]");
   const witze = document.getElementById("witzliste");
 
-  witze.innerHTML = ""; // Clear existing jokes
+  witze.innerHTML = "";
 
   savedJokes.forEach((joke) => {
     const p = document.createElement("p");
@@ -124,4 +121,5 @@ function deletejoke(id) {
 function clearAllJokes() {
   localStorage.removeItem("jokes");
   document.getElementById("witzliste").innerHTML = " ";
+  document.getElementById("joke").textContent = "";
 }
