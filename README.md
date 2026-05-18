@@ -26,4 +26,5 @@ Du kannst das Projekt ganz einfach lokal bei dir starten:
    Öffne die `index.html` direkt im Browser oder nutze eine Erweiterung wie *Live Server* in VS Code.
 
 Live-Demo
-https://github.com/devjasmin/Joke-App
+https://devjasmin.github.io/Joke-App/
+
